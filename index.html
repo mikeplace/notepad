@@ -1,0 +1,32 @@
+<html ng-app="blog">
+
+<body ng-controller="blogController">
+
+
+
+<div>
+    <div ng-repeat="blog in blogs">
+        <div>
+            <h2>{{blog.title}}</h2> {{blog.datePublished}}
+            <p>{{blog.blogtext}}</p>
+            <div ng-repeat giventag in blog.tags>{{giventag.tags}}</div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/directives/button.js"></script>
+<script type="text/javascript" src="js/directives/submitOnEnterKey.js"></script>
+<script type="text/javascript" src="js/BlogController.js"></script>
+
+
+
+
+</html>
