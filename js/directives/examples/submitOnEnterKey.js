@@ -1,4 +1,4 @@
-angular.module('blog').directive('noEnter',function(){
+angular.module('writer').directive('noEnter',function(){
     return{
         restrict: 'A',
         link: function (scope, element, attrs) {
