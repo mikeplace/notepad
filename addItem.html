@@ -1,0 +1,40 @@
+<div ng-controller="addItemController">
+    <div class="container-fluid">
+
+        <h2>Add a new Item</h2>
+
+ <div>
+
+     <ng-form class="AddItem span4">
+         <label for="nameInput">Name:</label>
+         <input type="text" ng-model="name" id="nameInput"/>
+
+         <label for="DescInput">Description:</label>
+         <input type="text" ng-model="description"  id="DescInput"/>
+
+         <label for="pointsInput">Points:</label>
+         <input type="text"  ng-model="points" id="pointsInput"/>
+
+         <label for="locationInput">Location:</label>
+         <input type="text"  ng-model="location" id="locationInput"/>
+
+         <label for="categoryInput">Category:</label>
+         <input type="text"  ng-model="category" id="categoryInput"/>
+     </ng-form>
+
+     <div ng-show="somethingPopulated()" class="span7">
+
+         <card
+               name="name"
+               description="description"
+               points="points"
+               category="category"
+               location="location"
+               suggested="true">
+
+         </card>
+     </div>
+
+ </div>
+    </div>
+</div>

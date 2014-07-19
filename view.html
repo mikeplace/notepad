@@ -1,0 +1,22 @@
+<div ng-controller="ListCultureItems">
+    <div class="container-fluid">
+
+        <h2>Culture Experiences:</h2>
+
+        <div class="filterArea">
+            Search: <input type="text" ng-model="search"/>
+
+            <div class="addItem">
+                <button ng-click="addnewItem()">Add a new item</button>
+            </div>
+
+        </div>
+
+        <div ng-repeat="cultureItem in cultureItems | filter:search" class="span10 <!--cultureCard img-rounded-->">
+            <card name="cultureItem.name" description="cultureItem.description" points="cultureItem.culturalValue" category="cultureItem.category" location="cultureItem.location"> pointsAreSuggested="false"; </card>
+        </div>
+
+    </div>
+</div>
+
+
