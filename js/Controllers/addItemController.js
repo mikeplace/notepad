@@ -1,7 +1,7 @@
 (function(){
 
     angular.module('cultureApp')
-        .controller('addItemController',function($scope){
+        .controller('addItemController',function($scope,$location,voteUp){
 
                 $scope.name="";
                 $scope.description="";
@@ -19,6 +19,19 @@
                 }
                 return false;
             };
+
+            $scope.addItem = function(form){
+
+                alert(voteUp.sayHello());
+                if (form.$valid){
+
+
+                    $location.path("/main");
+
+
+                }
+
+            }
         });
 
 })();

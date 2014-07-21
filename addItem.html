@@ -5,21 +5,23 @@
 
  <div>
 
-     <ng-form class="AddItem span4">
+     <ng-form name="addForm" class="AddItem span4">
          <label for="nameInput">Name:</label>
-         <input type="text" ng-model="name" id="nameInput"/>
+         <input type="text" required ng-model="name" id="nameInput"/>
 
          <label for="DescInput">Description:</label>
-         <input type="text" ng-model="description"  id="DescInput"/>
+         <input type="text" required ng-model="description"  id="DescInput"/>
 
          <label for="pointsInput">Points:</label>
-         <input type="text"  ng-model="points" id="pointsInput"/>
+         <input type="text" required point-value ng-model="points" id="pointsInput"/>
 
          <label for="locationInput">Location:</label>
-         <input type="text"  ng-model="location" id="locationInput"/>
+         <input type="text" required ng-model="location" id="locationInput"/>
 
          <label for="categoryInput">Category:</label>
-         <input type="text"  ng-model="category" id="categoryInput"/>
+         <input type="text" required ng-model="category" id="categoryInput"/>
+         <br/>
+         <button type="submit" ng-click="addItem(addForm)">Add</button>
      </ng-form>
 
      <div ng-show="somethingPopulated()" class="span7">
@@ -33,6 +35,8 @@
                suggested="true">
 
          </card>
+
+
      </div>
 
  </div>

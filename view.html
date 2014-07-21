@@ -12,8 +12,14 @@
 
         </div>
 
-        <div ng-repeat="cultureItem in cultureItems | filter:search" class="span10 <!--cultureCard img-rounded-->">
-            <card name="cultureItem.name" description="cultureItem.description" points="cultureItem.culturalValue" category="cultureItem.category" location="cultureItem.location"> pointsAreSuggested="false"; </card>
+        <div ng-repeat="cultureItem in cultureItems | filter:search" class="span10">
+            <card name="cultureItem.name"
+                  description="cultureItem.description"
+                  points="cultureItem.culturalValue"
+                  category="cultureItem.category"
+                  location="cultureItem.location"
+                  suggested="false">
+            </card>
         </div>
 
     </div>
